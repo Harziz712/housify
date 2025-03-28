@@ -1,8 +1,11 @@
-import React from 'react'
+import Navbar from "./components/navbar"
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className="w-full h-[100%] p-0 m-0 bg-chart-2 overflow-hidden">
+    <Navbar/>
+
+    </div>
   )
 }
 
