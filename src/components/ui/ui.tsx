@@ -165,16 +165,21 @@ export const PropertyCard = () => {
     )}
 export const AboutDetail =( ) => {
     return(
-        <div className="relative w-[50%] text-center space-y-8 p-8">
-            <h2 className="text-primary-foreground  text-3xl font-bold">About <span className="text-primary">Us</span></h2>
+        <div className="relative w-[40%] text-left space-y-10 pt-8 px-8">
+            <h2 className="text-primary-foreground  text-3xl md:text-5xl font-bold">About <span className="text-primary">Us</span></h2>
             <div className="relative text-left space-y-5">
-            <p  className="text-primary-foreground">Welcome to Housify, where we turn dreams into addresses! we specialize in connecting homebuyers, sellers,
-            and investors with the perfect properties that match their needs and aspirations. With a team of dedicated real estate professionals, 
-            we offer expert guidance in buying, selling, and managing properties to ensure a seamless experience for our clients.</p>
-            <p  className="text-primary-foreground">  At Housify, we believe that a home is more than just a building—it’s a space where memories are made. That’s why we provide tailored solutions, in-depth market insights, 
-            and a commitment to excellence, ensuring you make the best investment for your future.
-            Whether you're searching for a luxury villa, a modern apartment, or a cozy family home, 
-            we’re here to help you every step of the way. Let’s find your dream home together! Your Dream Home, Your Reality! </p>
+            <p  className="text-primary-foreground">Welcome to Housify, where we turn dreams into addresses! We specialize in connecting homebuyers, sellers, a
+                nd investors with the perfect properties that match their needs and aspirations. With a team of dedicated real estate professionals,
+                 we offer expert guidance in buying, selling, and managing properties, ensuring a smooth and stress-free experience. 
+                Our passion for real estate goes beyond transactions—we aim to build lasting relationships based on trust, integrity, and excellence..</p>
+            <p  className="text-primary-foreground">  At Housify, we believe that a home is more than just a building—it’s a place where memories are made, families grow, 
+                and futures are built. That’s why we provide tailored solutions, 
+                in-depth market insights, and innovative strategies to help you make the best investment for your future.
+                 Whether you're searching for a luxury villa with breathtaking views, a modern high-rise apartment in the city, 
+                or a cozy family home in a serene neighborhood, we are committed to finding the perfect match for you.With a deep understanding 
+                of market trends and a client-first approach,
+                 we make real estate simple, transparent, and rewarding. No matter where you are in your real estate journey, 
+we’re here to guide you every step of the way. Your dream home is not just a vision—it’s a reality waiting to happen. Let’s make it happen together! </p>
             </div>
         </div>
     )

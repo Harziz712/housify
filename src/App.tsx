@@ -2,6 +2,7 @@ import About from "./components/about"
 import Discover from "./components/discover"
 import Home from "./components/home"
 import Navbar from "./components/navbar"
+import Property from "./components/property"
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Home/>
       <Discover/>
       <About/>
+      <Property/>
       </div>
     </div>
   )
