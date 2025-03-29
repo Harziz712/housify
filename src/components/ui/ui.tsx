@@ -1,5 +1,10 @@
+import { useState } from "react"
 import { links } from "../../lib/data"
+import { images } from "../../assets/images"
+import { ArrowRight, Heart } from "lucide-react"
+import { cn } from "../../lib/utils"
 import { Button } from "./button"
+import { motion } from "framer-motion"
 
 export const Logo = ({className}:{className?:string}) => {
     return (
@@ -73,4 +78,91 @@ export const DiscoverDetail = () => {
   we provide top-tier listings and personalized guidance to help you find the ideal space.  
   Start your journey to homeownership with us today!</p>
     </div>
+    )}
+
+export const AnimatedButton = () => {
+  return (
+    <Button className="bg-primary p-2 rounded-full shadow-md relative overflow-hidden">
+      <motion.div
+        className="flex items-center"
+        initial={{ x: 0 }}
+        animate={{ x: [0, 5, 0] }} // Moves right and back
+        transition={{ repeat: Infinity, duration: 0.6, ease: "easeInOut" }}
+      >
+        <ArrowRight className="text-white h-5 w-5" />
+      </motion.div>
+    </Button>
+  );
+};
+
+
+
+      
+export const PropertyCard = () => {
+          const [liked, setLiked] = useState(false);
+        
+          return (
+            <div className="grid grid-cols-2 gap-4 p-6">
+              <div className="relative col-span-1 w-full h-[100%] rounded-3xl overflow-hidden">
+                <img
+                  src={images.house3}
+                  alt="Modern House"
+                  className="w-full h-full object-cover"
+                />
+                <Button
+                  className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
+                  onClick={() => setLiked(!liked)}
+                >
+                  <Heart
+                    className={cn("h-6 w-6 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")}
+                  />
+                </Button>
+        
+                <div className="absolute bottom-4 left-4 bg-white p-4 rounded-2xl shadow-md w-[90%] flex flex-col">
+                  <p className="text-xl font-semibold">$930,000</p>
+                  <p className="text-sm text-gray-500">
+                    289 Lombard Street, San Francisco, CA 94133
+                  </p>
+                  <div className="flex justify-between mt-2 text-gray-700 text-sm">
+                    <p>2,218 Sq.Ft</p>
+                    <p>3 Beds</p>
+                    <p>2 Baths</p>
+                  </div>
+                  <div className="flex justify-end mt-2">
+                    {/* <Button className="bg-primary p-2 rounded-full shadow-md">
+                      <ArrowRight className="text-white h-5 w-5" />
+                    </Button> */}
+                    <AnimatedButton />
+                  </div>
+                </div>
+              </div>
+        
+              <div className="grid grid-cols-2 gap-3">
+                {[images.interior2, images.property1].map((src, index) => (
+                  <div key={index} className="relative  w-full h-[100%] rounded-3xl overflow-hidden">
+                    <img src={src} alt="House Interior" className="w-full h-full object-cover" />
+                    <Button
+                      className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
+                      onClick={() => setLiked(!liked)}
+                    >
+                      <Heart
+                        className={cn("h-5 w-5 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")}
+                      />
+                    </Button>
+                  </div>
+                ))}
+                    <div className="relative col-span-2  w-full h-[100%] rounded-3xl overflow-hidden">
+                    <img src={ images.housels} alt="House Interior" className="w-full h-full object-cover" />
+                    <Button
+                      className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
+                      onClick={() => setLiked(!liked)}
+                    >
+                      <Heart
+                        className={cn("h-5 w-5 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")}
+                      />
+                    </Button>
+                  </div>
+              </div>
+            </div>
+        
     )}
