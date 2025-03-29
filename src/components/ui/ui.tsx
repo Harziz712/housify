@@ -82,7 +82,7 @@ export const DiscoverDetail = () => {
 
 export const AnimatedButton = () => {
   return (
-    <Button className="bg-primary p-2 rounded-full shadow-md relative overflow-hidden">
+    <Button className="bg-primary p-2 rounded-full shadow-md relative overflow-hidden px-5  ">
       <motion.div
         className="flex items-center"
         initial={{ x: 0 }}
