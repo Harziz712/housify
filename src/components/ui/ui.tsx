@@ -89,7 +89,7 @@ export const AnimatedButton = () => {
         animate={{ x: [0, 5, 0] }} // Moves right and back
         transition={{ repeat: Infinity, duration: 0.6, ease: "easeInOut" }}
       >
-        <ArrowRight className="text-white h-5 w-5" />
+        <ArrowRight className="text-white h-25 w-25 -rotate-45" />
       </motion.div>
     </Button>
   );
@@ -119,21 +119,18 @@ export const PropertyCard = () => {
                 </Button>
         
                 <div className="absolute bottom-4 left-4 bg-white p-4 rounded-2xl shadow-md w-[90%] flex flex-col">
-                  <p className="text-xl font-semibold">$930,000</p>
-                  <p className="text-sm text-gray-500">
-                    289 Lombard Street, San Francisco, CA 94133
+                    <div className="flex flex-row justify-between"><p className="text-md md:text-3xl text-primary font-semibold">$930,000</p> <AnimatedButton /> </div>
+          <div className="flex flex-row justify-between">        <p className="text-sm text-gray-500">
+                    289 Lombard Street, <br /> San Francisco, <br /> CA 94133
                   </p>
-                  <div className="flex justify-between mt-2 text-gray-700 text-sm">
-                    <p>2,218 Sq.Ft</p>
-                    <p>3 Beds</p>
-                    <p>2 Baths</p>
-                  </div>
-                  <div className="flex justify-end mt-2">
-                    {/* <Button className="bg-primary p-2 rounded-full shadow-md">
-                      <ArrowRight className="text-white h-5 w-5" />
-                    </Button> */}
-                    <AnimatedButton />
-                  </div>
+                  <div className="flex justify-between mt-2 text-gray-700 text-sm space-x-3 text-center">
+                    <p>2,218 <br/> Sq.Ft</p>
+                    <hr className="border-1 border-foreground h-10" />
+                    <p>3 <br /> Beds</p>
+                    <hr className="border-1 border-foreground h-10" />
+                    <p>2 <br/> Baths</p>
+                  </div></div>
+               
                 </div>
               </div>
         
@@ -166,3 +163,19 @@ export const PropertyCard = () => {
             </div>
         
     )}
+export const AboutDetail =( ) => {
+    return(
+        <div className="relative w-[50%] text-center space-y-8 p-8">
+            <h2 className="text-primary-foreground  text-3xl font-bold">About <span className="text-primary">Us</span></h2>
+            <div className="relative text-left space-y-5">
+            <p  className="text-primary-foreground">Welcome to Housify, where we turn dreams into addresses! we specialize in connecting homebuyers, sellers,
+            and investors with the perfect properties that match their needs and aspirations. With a team of dedicated real estate professionals, 
+            we offer expert guidance in buying, selling, and managing properties to ensure a seamless experience for our clients.</p>
+            <p  className="text-primary-foreground">  At Housify, we believe that a home is more than just a building—it’s a space where memories are made. That’s why we provide tailored solutions, in-depth market insights, 
+            and a commitment to excellence, ensuring you make the best investment for your future.
+            Whether you're searching for a luxury villa, a modern apartment, or a cozy family home, 
+            we’re here to help you every step of the way. Let’s find your dream home together! Your Dream Home, Your Reality! </p>
+            </div>
+        </div>
+    )
+}
