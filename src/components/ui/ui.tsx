@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { links } from "../../lib/data"
 import { images } from "../../assets/images"
-import { ArrowRight, Heart } from "lucide-react"
+import { ArrowRight, Heart, Search } from "lucide-react"
 import { cn } from "../../lib/utils"
 import { Button } from "./button"
 import { motion } from "framer-motion"
+import { Input } from "./input"
 
 export const Logo = ({className}:{className?:string}) => {
     return (
@@ -168,11 +169,11 @@ export const AboutDetail =( ) => {
         <div className="relative w-[40%] text-left space-y-10 pt-8 px-8">
             <h2 className="text-primary-foreground  text-3xl md:text-5xl font-bold">About <span className="text-primary">Us</span></h2>
             <div className="relative text-left space-y-5">
-            <p  className="text-primary-foreground">Welcome to Housify, where we turn dreams into addresses! We specialize in connecting homebuyers, sellers, a
+            <p  className="text-primary-foreground text-sm">Welcome to Housify, where we turn dreams into addresses! We specialize in connecting homebuyers, sellers, a
                 nd investors with the perfect properties that match their needs and aspirations. With a team of dedicated real estate professionals,
                  we offer expert guidance in buying, selling, and managing properties, ensuring a smooth and stress-free experience. 
                 Our passion for real estate goes beyond transactions—we aim to build lasting relationships based on trust, integrity, and excellence..</p>
-            <p  className="text-primary-foreground">  At Housify, we believe that a home is more than just a building—it’s a place where memories are made, families grow, 
+            <p  className="text-primary-foreground text-sm">  At Housify, we believe that a home is more than just a building—it’s a place where memories are made, families grow, 
                 and futures are built. That’s why we provide tailored solutions, 
                 in-depth market insights, and innovative strategies to help you make the best investment for your future.
                  Whether you're searching for a luxury villa with breathtaking views, a modern high-rise apartment in the city, 
@@ -184,3 +185,21 @@ we’re here to guide you every step of the way. Your dream home is not just a v
         </div>
     )
 }
+
+
+
+export const PropertySearch = () => {
+  return (
+    <div className="flex w-full max-w-lg mx-auto items-center gap-2 border border-gray-300 rounded-full p-2 bg-white shadow-md">
+      <Input
+        type="search"
+        placeholder="Search for properties, locations, or agents..."
+        className="flex-1 px-4 py-2 border-none outline-none bg-transparent text-gray-700"
+      />
+      <Button type="submit" className="bg-primary text-white p-2 rounded-full hover:bg-primary-dark">
+        <Search className="w-5 h-5" />
+      </Button>
+    </div>
+  );
+};
+
