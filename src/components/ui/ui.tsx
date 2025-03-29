@@ -64,3 +64,13 @@ export const NavLinks = () => {
     )
 }
   
+export const DiscoverDetail = () => {
+    return (
+        <div className="flex flex-col md:flex-row justify-evenly items-top  w-full  ">
+        <h1 className="text-5xl md:text-[60px]  font-bold text-foreground md:w-[50%]">Discover Your Perfect <br /> <span className="text-primary">Property Match</span></h1>
+        <p className="text-sm text-foreground  md:w-[50%]"> Discover your perfect property match with our expert real estate services.  
+  Whether you're searching for a luxurious villa, a cozy apartment, or a modern family home,  
+  we provide top-tier listings and personalized guidance to help you find the ideal space.  
+  Start your journey to homeownership with us today!</p>
+    </div>
+    )}

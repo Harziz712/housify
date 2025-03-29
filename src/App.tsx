@@ -1,3 +1,4 @@
+import Discover from "./components/discover"
 import Home from "./components/home"
 import Navbar from "./components/navbar"
 
@@ -8,6 +9,7 @@ const App = () => {
     <div className=" h-[70px] absolute top-0 w-full"></div>
     <div >
       <Home/>
+      <Discover/>
       </div>
     </div>
   )
