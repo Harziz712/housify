@@ -41,6 +41,7 @@ export const NavLinks = () => {
     </div>
     )
 } 
+
  export const HomeMessage = () =>{
     return (
       
@@ -158,6 +159,8 @@ export const PropertyCard = () => {
             </div>
           </div>
     )}
+
+    
 export const AboutDetail =( ) => {
     return(
     <div className="w-full md:w-[40%] space-y-6 p-6 md:p-8">
@@ -169,21 +172,8 @@ export const AboutDetail =( ) => {
         in connecting homebuyers, sellers, and investors with the perfect
         properties that match their needs and aspirations.
       </p>
-      <p className="text-primary-foreground text-sm md:text-base md:hidden">
-        At Housify, we believe that a home is more than just a building—it’s a
-        place where memories are made, families grow, and futures are built.
-        That’s why we provide tailored solutions, in-depth market insights, and
-        innovative strategies to help you make the best investment for your
-        future.
-      </p>
-          <p  className="text-primary-foreground md:text-base hidden md:grid">  At Housify, we believe that a home is more than just a building—it’s a place where memories are made, families grow, 
-                and futures are built. That’s why we provide tailored solutions, 
-                in-depth market insights, and innovative strategies to help you make the best investment for your future.
-                 Whether you're searching for a luxury villa with breathtaking views, a modern high-rise apartment in the city, 
-                or a cozy family home in a serene neighborhood, we are committed to finding the perfect match for you.With a deep understanding 
-                of market trends and a client-first approach,
-                 we make real estate simple, transparent, and rewarding. No matter where you are in your real estate journey, 
-we’re here to guide you every step of the way. Your dream home is not just a vision—it’s a reality waiting to happen. Let’s make it happen together! </p>
+
+          <p  className="text-primary-foreground md:text-base"> At Housify, we believe a home is more than just a building—it’s where memories are made and futures are built. We provide tailored solutions and expert insights to help you make the best investment. Whether you’re looking for a luxury villa, a modern apartment, or a cozy family home, we’re committed to finding your perfect match. With a client-first approach, we make real estate simple and rewarding. Let’s turn your dream home into reality!</p>
             
     </div>
     )
