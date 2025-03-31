@@ -2,10 +2,9 @@ import { DiscoverDetail, PropertyCard } from "./ui/ui"
 
 const Discover = () => {
   return (
-    <div id="discover" className='max-h-full md:h-[100%] space-y-3 w-full  md:mt-0 p-5 md:p-20'> 
-    
-     <DiscoverDetail/>
-     <PropertyCard/>
+    <div id="discover" className="max-h-full w-full space-y-6 p-5 md:p-16 lg:p-20"> 
+      <DiscoverDetail />
+      <PropertyCard />
     </div>
   )
 }

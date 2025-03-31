@@ -72,12 +72,16 @@ export const NavLinks = () => {
   
 export const DiscoverDetail = () => {
     return (
-        <div className="flex flex-col md:flex-row justify-evenly items-top  w-full  ">
-        <h1 className="text-5xl md:text-[60px]  font-bold text-foreground md:w-[50%]">Discover Your Perfect <br /> <span className="text-primary">Property Match</span></h1>
-        <p className="text-sm text-foreground  md:w-[50%]"> Discover your perfect property match with our expert real estate services.  
-  Whether you're searching for a luxurious villa, a cozy apartment, or a modern family home,  
-  we provide top-tier listings and personalized guidance to help you find the ideal space.  
-  Start your journey to homeownership with us today!</p>
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full space-y-6 md:space-y-0 md:space-x-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground w-full md:w-1/2 text-center md:text-left">
+        Discover Your Perfect <br />
+        <span className="text-primary">Property Match</span>
+      </h1>
+      <p className="text-sm sm:text-base text-foreground w-full md:w-1/2 text-center md:text-left">
+        Discover your perfect property match with our expert real estate services. Whether you're searching for a
+        luxurious villa, a cozy apartment, or a modern family home, we provide top-tier listings and personalized
+        guidance to help you find the ideal space. Start your journey to homeownership with us today!
+      </p>
     </div>
     )}
 
@@ -103,77 +107,76 @@ export const PropertyCard = () => {
           const [liked, setLiked] = useState(false);
         
           return (
-            <div className="grid grid-cols-2 gap-4 p-6">
-              <div className="relative col-span-1 w-full h-[100%] rounded-3xl overflow-hidden">
-                <img
-                  src={images.house3}
-                  alt="Modern House"
-                  className="w-full h-full object-cover"
-                />
-                <Button
-                  className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
-                  onClick={() => setLiked(!liked)}
-                >
-                  <Heart
-                    className={cn("h-6 w-6 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")}
-                  />
-                </Button>
-        
-                <div className="absolute bottom-4 left-4 bg-white p-4 rounded-2xl shadow-md w-[90%] flex flex-col">
-                    <div className="flex flex-row justify-between"><p className="text-md md:text-3xl text-primary font-semibold">$930,000</p> <AnimatedButton /> </div>
-          <div className="flex flex-row justify-between">        <p className="text-sm text-gray-500">
-                    289 Lombard Street, <br /> San Francisco, <br /> CA 94133
-                  </p>
-                  <div className="flex justify-between mt-2 text-gray-700 text-sm space-x-3 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6 md:p-8">
+            <div className="relative w-full h-[100%] sm:h-80 md:h-[100%] rounded-3xl overflow-hidden">
+              <img src={images.house3} alt="Modern House" className="w-full h-full object-cover" />
+              <Button
+                className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
+                onClick={() => setLiked(!liked)}
+              >
+                <Heart className={cn("h-6 w-6 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")} />
+              </Button>
+              <div className="absolute bottom-4 left-4 bg-white p-4 rounded-2xl shadow-md w-[90%] flex flex-col">
+                <div className="flex justify-between items-center">
+                  <p className="text-md md:text-2xl lg:text-3xl text-primary font-semibold">$930,000</p>
+                  <AnimatedButton />
+                </div>
+                <div className="flex justify-between text-gray-500 text-xs md:text-md mt-2">
+                  <p>289 Lombard Street, <br /> San Francisco, CA 94133</p>
+                  <div className="flex space-x-3 text-center">
                     <p>2,218 <br/> Sq.Ft</p>
-                    <hr className="border-1 border-foreground h-10" />
+                    <hr className="border border-foreground h-10" />
                     <p>3 <br /> Beds</p>
-                    <hr className="border-1 border-foreground h-10" />
+                    <hr className="border border-foreground h-10" />
                     <p>2 <br/> Baths</p>
-                  </div></div>
-               
+                  </div>
                 </div>
               </div>
-        
-              <div className="grid grid-cols-2 gap-3">
-                {[images.interior2, images.property1].map((src, index) => (
-                  <div key={index} className="relative  w-full h-[100%] rounded-3xl overflow-hidden">
-                    <img src={src} alt="House Interior" className="w-full h-full object-cover" />
-                    <Button
-                      className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
-                      onClick={() => setLiked(!liked)}
-                    >
-                      <Heart
-                        className={cn("h-5 w-5 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")}
-                      />
-                    </Button>
-                  </div>
-                ))}
-                    <div className="relative col-span-2  w-full h-[100%] rounded-3xl overflow-hidden">
-                    <img src={ images.housels} alt="House Interior" className="w-full h-full object-cover" />
-                    <Button
-                      className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
-                      onClick={() => setLiked(!liked)}
-                    >
-                      <Heart
-                        className={cn("h-5 w-5 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")}
-                      />
-                    </Button>
-                  </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-3">
+              {[images.interior2, images.property1].map((src, index) => (
+                <div key={index} className="relative w-full h-32 sm:h-48 md:h-64 lg:h-[100%] rounded-3xl overflow-hidden">
+                  <img src={src} alt="House Interior" className="w-full h-full object-cover" />
+                  <Button
+                    className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
+                    onClick={() => setLiked(!liked)}
+                  >
+                    <Heart className={cn("h-5 w-5 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")} />
+                  </Button>
+                </div>
+              ))}
+              <div className="relative col-span-2 w-full h-40 sm:h-56 md:h-72 lg:h-[100%] rounded-3xl overflow-hidden">
+                <img src={images.housels} alt="House Interior" className="w-full h-full object-cover" />
+                <Button
+                  className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md"
+                  onClick={() => setLiked(!liked)}
+                >
+                  <Heart className={cn("h-5 w-5 transition-all", liked ? "text-red-500 fill-red-500" : "text-gray-500")} />
+                </Button>
               </div>
             </div>
-        
+          </div>
     )}
 export const AboutDetail =( ) => {
     return(
-        <div className="relative w-[40%] text-left space-y-10 pt-8 px-8">
-            <h2 className="text-primary-foreground  text-3xl md:text-5xl font-bold">About <span className="text-primary">Us</span></h2>
-            <div className="relative text-left space-y-5">
-            <p  className="text-primary-foreground text-sm">Welcome to Housify, where we turn dreams into addresses! We specialize in connecting homebuyers, sellers, a
-                nd investors with the perfect properties that match their needs and aspirations. With a team of dedicated real estate professionals,
-                 we offer expert guidance in buying, selling, and managing properties, ensuring a smooth and stress-free experience. 
-                Our passion for real estate goes beyond transactions—we aim to build lasting relationships based on trust, integrity, and excellence..</p>
-            <p  className="text-primary-foreground text-sm">  At Housify, we believe that a home is more than just a building—it’s a place where memories are made, families grow, 
+    <div className="w-full md:w-[40%] space-y-6 p-6 md:p-8">
+      <h2 className="text-primary-foreground text-3xl md:text-5xl font-bold">
+        About <span className="text-primary">Us</span>
+      </h2>
+      <p className="text-primary-foreground text-sm md:text-base">
+        Welcome to Housify, where we turn dreams into addresses! We specialize
+        in connecting homebuyers, sellers, and investors with the perfect
+        properties that match their needs and aspirations.
+      </p>
+      <p className="text-primary-foreground text-sm md:text-base md:hidden">
+        At Housify, we believe that a home is more than just a building—it’s a
+        place where memories are made, families grow, and futures are built.
+        That’s why we provide tailored solutions, in-depth market insights, and
+        innovative strategies to help you make the best investment for your
+        future.
+      </p>
+          <p  className="text-primary-foreground md:text-base hidden md:grid">  At Housify, we believe that a home is more than just a building—it’s a place where memories are made, families grow, 
                 and futures are built. That’s why we provide tailored solutions, 
                 in-depth market insights, and innovative strategies to help you make the best investment for your future.
                  Whether you're searching for a luxury villa with breathtaking views, a modern high-rise apartment in the city, 
@@ -181,8 +184,8 @@ export const AboutDetail =( ) => {
                 of market trends and a client-first approach,
                  we make real estate simple, transparent, and rewarding. No matter where you are in your real estate journey, 
 we’re here to guide you every step of the way. Your dream home is not just a vision—it’s a reality waiting to happen. Let’s make it happen together! </p>
-            </div>
-        </div>
+            
+    </div>
     )
 }
 
