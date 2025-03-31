@@ -115,6 +115,10 @@ const PropertySlide = () => {
             </span>
           ))}
         </div>
+        <div className="text-center mt-4">
+  <p className="text-sm text-gray-500 hidden">Slide {current} of {count}</p>
+</div>
+
       </div>
     </div>
   );
