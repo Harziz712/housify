@@ -78,24 +78,22 @@ const PropertySlide = () => {
                       />
                     </Button>
 
-                    <div className="absolute bottom-4 left-4 bg-white p-4 rounded-2xl shadow-md w-[90%] flex flex-col">
-                      <div className="flex flex-row justify-between">
-                        <p className="text-md md:text-3xl text-primary font-semibold">$930,000</p>
-                        <AnimatedButton />
-                      </div>
-                      <div className="flex flex-row justify-between">
-                        <p className="text-sm text-gray-500">
-                          289 Lombard Street, <br /> San Francisco, <br /> CA 94133
-                        </p>
-                        <div className="flex justify-between mt-2 text-gray-700 text-sm space-x-3 text-center">
-                          <p>2,218 <br /> Sq.Ft</p>
-                          <hr className="border-1 border-foreground h-10" />
-                          <p>3 <br /> Beds</p>
-                          <hr className="border-1 border-foreground h-10" />
-                          <p>2 <br /> Baths</p>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="absolute bottom-4 left-4 bg-white p-4 rounded-2xl shadow-md w-[90%] flex flex-col">
+                             <div className="flex justify-between items-center">
+                               <p className="text-md md:text-2xl lg:text-3xl text-primary font-semibold">$930,000</p>
+                               <AnimatedButton />
+                             </div>
+                             <div className="flex justify-between text-gray-500 text-xs md:text-md mt-2">
+                               <p>289 Lombard Street, <br /> San Francisco, CA 94133</p>
+                               <div className="flex space-x-3 text-center">
+                                 <p>2,218 <br/> Sq.Ft</p>
+                                 <hr className="border border-foreground h-10" />
+                                 <p>3 <br /> Beds</p>
+                                 <hr className="border border-foreground h-10" />
+                                 <p>2 <br/> Baths</p>
+                               </div>
+                             </div>
+                           </div>
                   </div>
                 </div>
               </CarouselItem>
