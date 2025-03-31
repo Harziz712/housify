@@ -1,3 +1,4 @@
+import PropertySilde from "./propertyslide"
 import { Button } from "./ui/button"
 import { PropertySearch } from "./ui/ui"
 
@@ -14,10 +15,9 @@ const Property = () => {
       <PropertySearch/>
     </div>
             </div>
-    <div  className="flex flex-col md:flex-row h-[90vh] bg-accent-foreground md:pt-0 md:h-[100%] w-full bg-chart-3 rounded-4xl  gap-10 mt-8 relative ">
+    <div  className="flex flex-col md:flex-row  md:pt-0 h-[100%] w-full py-10 rounded-4xl  gap-10 mt-8 relative ">
       
-<div className="w-[50%]">
-</div>
+<PropertySilde/>
     </div>
     </div>
   )
